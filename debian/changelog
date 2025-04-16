@@ -1,5 +1,137 @@
-template-repository (1.0-1) unstable; urgency=medium
+libnova (0.16-5.1) unstable; urgency=medium
 
-  * Initial release
+  * Non-maintainer upload.
+  * Rename libraries for 64-bit time_t transition.  Closes: #1062485
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Benjamin Drung <bdrung@debian.org>  Wed, 28 Feb 2024 14:22:58 +0000
+
+libnova (0.16-5) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Bump debhelper from deprecated 9 to 12.
+    + debian/rules: Rely on default use of dh_missing rather than using
+      dh_install --list-missing.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Repository.
+  * Drop unnecessary dependency on dh-autoreconf.
+
+  [ Pino Toscano ]
+  * Add the configuration for the CI on salsa.
+  * Simplify install files.
+  * Bump the debhelper compatibility to 13:
+    - switch the debhelper-compat build dependency to 13
+  * Bump Standards-Version to 4.5.0, no changes required.
+  * Add Rules-Requires-Root: no.
+  * Bump version of watch file to 4, and use https.
+  * Drop the autotools-dev, no more needed.
+  * Drop debian/libnovaconfig.1, as it was not installed; it does not provide
+    any useful content anyway.
+  * Rewrite copyright to copyright-format v1.0, and update.
+  * Ship the upstream examples in libnova-dev.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 08 Nov 2020 09:55:47 +0100
+
+libnova (0.16-4) unstable; urgency=medium
+
+  * New revision
+  * Fix Breaks/Replaces version (Closes: 920253)
+  * Release to unstable
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 23 Jan 2019 09:33:25 -0300
+
+libnova (0.16-3) unstable; urgency=medium
+
+  [ W. Martin Borgert ]
+  * Complete Multi-Arch (Closes: #873605).
+
+  [ Maximiliano Curia ]
+  * Update Vcs fields
+  * Release to unstable
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 22 Jan 2019 10:41:53 -0300
+
+libnova (0.16-2) unstable; urgency=medium
+
+  * Add new patch: Use-CFLAGS-from-environment.patch.
+    Thanks to Simon Ruderich for the patch (Closes: 671462)
+  * Update sid version (Closes: 725775)
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 27 Oct 2016 10:29:14 +0200
+
+libnova (0.16-1) experimental; urgency=medium
+
+  * New upstream release (0.16).
+  * Bump Standards-Version to 3.9.8, no changes needed.
+  * Update vcs fields
+  * Follow upstream soversion bump
+  * Update install files
+  * Update copyright information
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 19 Oct 2016 18:11:22 +0200
+
+libnova (0.14.0-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Use dh-autoreconf in build to support new architectures (closes: #727419)
+
+ -- Chen Baozi <baozich@gmail.com>  Thu, 05 Jun 2014 20:27:12 +0800
+
+libnova (0.14.0-2) unstable; urgency=low
+
+  * Team upload. Upload to unstable.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 25 Mar 2012 14:51:22 +0200
+
+libnova (0.14.0-1) experimental; urgency=low
+
+  * Team upload.
+  * New upstream release. (Closes: #604411)
+
+  [ Matthew Rosewarne ]
+  * Add watch file.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Bump Standards-Version to 3.9.1.
+  * Add a final newline to the watch file.
+  * Update installed files.
+
+  [ José Manuel Santamaría Lema ]
+  * Switch to source format 3.0 (quilt).
+  * Bump debhelper compatibility level to 7.
+  * Update installed files.
+  * Update copyright file.
+  * Don't install an uneeded *.la file. (Closes: #621545)
+
+  [ Pino Toscano ]
+  * Add Vcs-Browser and Vcs-Git headers in control.
+  * Small description changes.
+  * Bump Standards-Version to 3.9.3.
+  * Switch from cdbs to the dh sequencer:
+    - drop build dependency on cdbs
+    - bump debhelper build dependency to 7.0.50~
+    - run the lntest executable in a non-fatal way, as it fails and it is
+      not run as a test by the build system
+  * Convert to multi-arch:
+    - bump debhelper build dependency to 9
+    - bump compat to 9 (this also makes use of dpkg-buildflags)
+    - update paths in .install files
+    - mark libnova-0.14-0 as Multi-Arch: same
+    - make libnova-0.14-0 pre-depend on ${misc:Pre-Depends}
+  * Update date/version in libnovaconfig.1.
+  * Explicitly remove .la files from debian/tmp, instead of ignore them
+    in dh_install.
+  * Add my contributions to the copyright file.
+
+  [ Sune Vuorela ]
+  * Change my email address to the @debian.org one.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 18 Mar 2012 10:48:52 +0100
+
+libnova (0.12.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #453099)
+
+ -- Sune Vuorela <debian@pusling.com>  Tue, 27 Nov 2007 13:00:34 +0100
