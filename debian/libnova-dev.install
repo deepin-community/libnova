@@ -1,0 +1,3 @@
+usr/include/libnova/
+usr/lib/*/libnova.a
+usr/lib/*/libnova.so

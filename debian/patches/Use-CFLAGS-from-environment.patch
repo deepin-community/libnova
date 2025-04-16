@@ -1,0 +1,21 @@
+From: Simon Ruderich <simon@ruderich.org>
+Date: Wed, 19 Oct 2016 18:20:02 +0200
+Subject: Use CFLAGS from environment
+
+---
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index 94247f5..cb7cbc1 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -100,7 +100,7 @@ else
+ fi
+ 
+ dnl Make sure we fail on all warnings
+-CFLAGS=-Wall
++CFLAGS="$CFLAGS -Wall"
+ 
+ AC_CONFIG_FILES([
+ Makefile
